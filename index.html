@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CESDE-CRUD-JS</title>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="crud">
+      <h1 class="crud__title">Cursos</h1>
+      <form id="formRegister" class="crud__form">
+        <input type="text" placeholder="Curso" id="nameInput" class="form__input" />
+        <input type="text" placeholder="Descripción" id="descriptionInput" class="form__input" />
+        <input type="number" placeholder="Duración en semanas" id="durationInput" class="form__input" />
+        <input type="number" step="0.01" placeholder="Precio" id="priceInput" class="form__input" />
+        <input type="datetime-local" placeholder="Fecha de inicio" id="dateInput" class="form__input" />
+        <select id="teacherSelect" class="form__select">
+          <option value="">Seleccionar docente</option>
+        </select>
+        <button type="submit" id="submitButton" class="button button--primary">Agregar</button>
+      </form>
+      <table class="crud__table">
+        <thead>
+          <tr>
+            <th class="table__header">Curso</th>
+            <th class="table__header">Descripción</th>
+            <th class="table__header">Duración</th>
+            <th class="table__header">Precio</th>
+            <th class="table__header">Inicio</th>
+            <th class="table__header">Docente</th>
+            <th class="table__header">Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="table__body"></tbody>
+      </table>
+    </section>
+    <section class="crud-docentes">
+      <h1 class="crud__title">Docentes</h1>
+      <form id="formRegisterDocente" class="crud__form">
+        <input type="text" placeholder="Nombre" id="nombreDocenteInput" class="form__input" />
+        <input type="text" placeholder="Documento" id="documentoDocenteInput" class="form__input" />
+        <input type="text" placeholder="Correo" id="correoDocenteInput" class="form__input" />
+        <button type="submit" id="submitButtonDocente" class="button button--primary">Agregar</button>
+      </form>
+      <table class="crud__table">
+        <thead>
+          <tr>
+            <th class="table__header">Nombre</th>
+            <th class="table__header">Documento</th>
+            <th class="table__header">Correo</th>
+            <th class="table__header">Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tableBodyDocentes" class="table__body"></tbody>
+      </table>
+    </section>
+    
+  </main>
+
+  <!-- My JS -->
+  <script src="cursos.js"></script>
+  <script src="docentes.js"></script>
+</body>
+</html>
